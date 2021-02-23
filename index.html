@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <https://github.com/gary-rivera/jQuery-dom.gittitle>Document</title>
   <link rel="stylesheet"
         href="https://unpkg.com/bootstrap/dist/css/bootstrap.css">
   <style>
@@ -74,7 +74,38 @@
 </div>
 <script src="https://unpkg.com/jquery"></script>
 <script>
-  // Add your code here!
+  //1
+  $(document).ready(() => {
+    console.log("Let's get ready to party with jQuery!");
+  });
+  //2
+  $("article img").addClass('image-center');
+  //3
+  $("article p").last().remove();
+  //4
+  $('#title').css('font-size', () => {
+    return Math.floor(Math.random() * Math.floor(100))
+  })
+  //5
+  $('ol').append($('<li>', {text: "look here"}))
+  //6
+  $('ol').empty().html($('<p>', {text: 'Apologies for that list'}))
+  //7
+  //event of submit for change or blur? to save the values proivded by user
+  // assign those values to variable
+  //apply those values to expression below
+  //$('document').css('background-color', rgb(a, b, c))
+  $(".form-control").on('keyup blur change', () => {
+      let red = $(".form-control").eq(0).val();
+      let blue = $(".form-control").eq(1).val();
+      let green = $(".form-control").eq(2).val();
+
+      $("body").css('background-color', `rgb(${red}, ${blue}, ${green}`)})
+
+  //8 
+  $('img').on('click', (e) => { 
+    $('img').remove();
+  })
 </script>
 </body>
 

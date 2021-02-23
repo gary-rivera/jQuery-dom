@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="movies.css" />
+    <title>Movies</title>
+  </head>
+  <body>
+      <h1> Rate-A-Movie </h1>
+      <br>
+      <!-- form -->
+    <form class="submitForm">
+        <input class="movieForm" type="text" value="Movie Title"></input>
+        <input class="movieForm" type="number" min="0" max="10" value="10"></input>
+        <button id="btn" class="movieForm" type="submit">Submit</button>
+    </form>
+    <!-- list submissions -->
+    <div class="results">
+        <h3> Submissions </h3>
+        <ol class="submissions">
+        </ol>
+    </div>
+
+    <script src="https://unpkg.com/jquery"></script>
+    <script src="movies.js"></script>
+  </body>
+</html>
